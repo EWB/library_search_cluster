@@ -52,19 +52,10 @@ function library_search_cluster_default_box() {
   $box->description = 'Odysseus search';
   $box->options = array(
     'body' => array(
-      'value' => '<form method="post" action="http://library.stlawu.edu/search/X">
-<select name="searchtype">
-<option value="a">Author</option><br />
-<option value="t" selected="selected">Title</option><br />
-<option value="d">Subject</option><br />
-<option value="X">Keyword</option><br />
-<option value="c">Call Number</option><br />
-</select>
-<p><input type="text" value="Search for books, videos and more..." onfocus="if (this.value==\'Search for books, videos and more...\') this.value=\'\';" name="searcharg" size="35" maxlength="75" /><input type="submit" name="submit" value="Search" /><br />
-<input type="hidden" name="searchscope" value="3" /><br />
-</form>',
+      'value' => '<form action="http://library.stlawu.edu/search/X" method="post"><select name="searchtype"><option value="a">Author</option><option selected="selected" value="t">Title</option><option value="d">Subject</option><option value="X">Keyword</option><option value="c">Call Number</option></select><input maxlength="75" name="searcharg" onfocus="if (this.value==\'Search for books, videos and more...\') this.value=\'\';" size="35" value="Search for books, videos and more..." type="text"><input name="submit" value="Search" type="submit"><br><input name="searchscope" value="3" type="hidden"></form>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['odysseus'] = $box;
 

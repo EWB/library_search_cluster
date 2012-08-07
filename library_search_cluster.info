@@ -2,6 +2,7 @@ name = Library Search Cluster
 description = Collection of tabbed searches
 core = 7.x
 package = Features
+php = 5.2.4
 version = 7.x-1.0-beta1
 project = library_search_cluster
 dependencies[] = apachesolr

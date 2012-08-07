@@ -43,13 +43,13 @@ function library_search_cluster_quicktabs_default_quicktabs() {
     3 => array(
       'bid' => 'search_delta_form',
       'hide_title' => 1,
-      'title' => 'Our Website',
+      'title' => 'Website',
       'weight' => '-97',
       'type' => 'block',
     ),
   );
   $quicktabs->renderer = 'quicktabs';
-  $quicktabs->style = 'Zen';
+  $quicktabs->style = 'Basic';
   $quicktabs->options = array();
 
   // Translatables
@@ -58,7 +58,7 @@ function library_search_cluster_quicktabs_default_quicktabs() {
   t('Journal Finder');
   t('Library Search Cluster');
   t('ODYsseus');
-  t('Our Website');
+  t('Website');
 
   $export['library_search_cluster'] = $quicktabs;
 
