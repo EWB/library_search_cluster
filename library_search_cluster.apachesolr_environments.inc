@@ -20,6 +20,13 @@ function library_search_cluster_apachesolr_environments() {
     'apachesolr_search_facet_pages' => '',
     'apachesolr_search_show_facets' => 0,
   );
+  $environment->index_bundles = array(
+    'node' => array(
+      0 => 'article',
+      1 => 'base_announcement',
+      2 => 'page',
+    ),
+  );
   $export['solr'] = $environment;
 
   return $export;
