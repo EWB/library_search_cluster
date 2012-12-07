@@ -42,5 +42,36 @@ function library_search_cluster_default_box() {
   );
   $export['journal_search'] = $box;
 
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'odysseus';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'ODYsseus';
+  $box->options = array(
+    'body' => array(
+      'value' => '<form action="http://library.stlawu.edu/search/X" method="post"><select name="searchtype"><option value="a">Author</option><option selected="selected" value="t">Title</option><option value="d">Subject</option><option value="X">Keyword</option><option value="c">Call Number</option></select><p><input maxlength="75" name="searcharg" onfocus="if (this.value==\'Search for books, videos and more...\') this.value=\'\';" size="35" value="Search for books, videos and more..." type="text"><input name="submit" value="Search" type="submit"><br><input name="searchscope" value="3" type="hidden"></p></form><div class="advanced-search"><a href="http://library.stlawu.edu/search">Advanced Search</a></div>',
+      'format' => 'full_html',
+    ),
+  );
+  $export['odysseus'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'video_search';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Video Search';
+  $box->options = array(
+    'body' => array(
+      'value' => '<form action="http://library.stlawu.edu/search/X" method="post"><select name="searchtype"><option value="a">Author</option><option selected="selected" value="t">Title</option><option value="d">Subject</option><option value="X">Keyword</option><option value="c">Call Number</option></select><p><input maxlength="75" name="searcharg" onfocus="if (this.value==\'Search for DVDs or videotapes...\') this.value=\'\';" size="30" value="Search for DVDs or videotapes..." type="text"><input name="submit" value="Search" type="submit"><input name="searchscope" value="1" type="hidden"></p></form>',
+      'format' => 'full_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['video_search'] = $box;
+
   return $export;
 }
