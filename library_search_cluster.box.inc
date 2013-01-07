@@ -51,9 +51,10 @@ function library_search_cluster_default_box() {
   $box->description = 'ODYsseus';
   $box->options = array(
     'body' => array(
-      'value' => '<form action="http://library.stlawu.edu/search/X" method="post"><select name="searchtype"><option value="a">Author</option><option selected="selected" value="t">Title</option><option value="d">Subject</option><option value="X">Keyword</option><option value="c">Call Number</option></select><p><input maxlength="75" name="searcharg" onfocus="if (this.value==\'Search for books, videos and more...\') this.value=\'\';" size="35" value="Search for books, videos and more..." type="text"><input name="submit" value="Search" type="submit"><br><input name="searchscope" value="3" type="hidden"></p></form><div class="advanced-search"><a href="http://library.stlawu.edu/search">Advanced Search</a></div>',
+      'value' => '<form action="http://library.stlawu.edu/search/X" method="post"><select name="searchtype"><option value="a">Author</option><option selected="selected" value="t">Title</option><option value="d">Subject</option><option value="X">Keyword</option><option value="c">Call Number</option></select><p><input maxlength="75" name="searcharg" onfocus="if (this.value==\'Search for books, videos and more...\') this.value=\'\';" size="30" value="Search for books, videos and more..." type="text"><input name="submit" value="Search" type="submit"><br><input name="searchscope" value="3" type="hidden"></p></form><div class="advanced-search"><a href="http://library.stlawu.edu/search">Advanced Search</a></div>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['odysseus'] = $box;
 
